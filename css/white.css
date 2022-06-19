@@ -1,0 +1,44 @@
+
+body {
+
+background-color:rgb(0,0,0);
+color:rgb(255,255,255);
+}
+
+#sectionkeyboard {padding-top:4%;padding-bottom:4%;text-align:center;position:fixed;width:100%;
+
+background: rgba(40, 40, 40, 0.8);bottom:0px;left:0px;}
+#sectionkeyboard button:hover {background:rgb(150,150,150;}
+#sectionkeyboard button:active {background:rgb(150,150,150;}
+
+#logotypes {
+display:none;
+}
+
+
+#Breach {
+color:#83f352;
+border:3px solid #83f352;
+border-top:20px solid #83f352;
+}
+
+#Tracing {
+color:#83f352;
+border:3px solid #83f352;
+border-top:20px solid #83f352;
+}
+
+#AccessGranted{
+border:2px solid #83f352;
+color:#83f352;
+}
+
+#Evacuate {
+
+border:3px solid #F00;
+color:#F00;
+border-top:20px solid #F00;
+}
+
+
+

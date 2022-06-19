@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head> 
+<title>Terminal</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="iphone-keyboard.css" rel="stylesheet" type="text/css" />
+<meta name="MobileOptimized" content="320">
+
+
+
+
+<meta name="msapplication-TileImage" content="img/terminal.png"/>
+<meta name="msapplication-TileColor" content="#212121"/>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
+<link rel="apple-touch-icon" href="img/terminal.png">
+
+<!-- iPhone -->
+<link href="img/apple-touch-startup-image-320x460.png"
+      media="(device-width: 320px) and (device-height: 480px)
+         and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image">
+<!-- iPhone (Retina) -->
+<link href="img/apple-touch-startup-image-640x920.png"
+      media="(device-width: 320px) and (device-height: 480px)
+         and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image">
+<!-- iPhone 5 -->
+<link href="img/apple-touch-startup-image-640x1096.png"
+      media="(device-width: 320px) and (device-height: 568px)
+         and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image">
+<!-- iPad (portrait) -->
+<link href="img/apple-touch-startup-image-768x1004.png"
+      media="(device-width: 768px) and (device-height: 1024px)
+         and (orientation: portrait)
+         and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image">
+<!-- iPad (landscape) -->
+<link href="img/apple-touch-startup-image-748x1024.png"
+      media="(device-width: 768px) and (device-height: 1024px)
+         and (orientation: landscape)
+         and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image">
+<!-- iPad (Retina, portrait) -->
+<link href="img/apple-touch-startup-image-1536x2008.png"
+      media="(device-width: 768px) and (device-height: 1024px)
+         and (orientation: portrait)
+         and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image">
+<!-- iPad (Retina, landscape) -->
+<link href="img/apple-touch-startup-image-1496x2048.png"
+      media="(device-width: 768px) and (device-height: 1024px)
+         and (orientation: landscape)
+         and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image">
+
+
+<script src='js/jquery.min.js' type='text/javascript'></script> 
+<script src='js/script.js' type='text/javascript'></script> 
+<script type="application/javascript" src="js/fastclick.js"></script>
+
+
+
+
+
+
+<script type="application/javascript">
+	window.addEventListener('load', function() {
+		new FastClick(document.body);
+	}, false);
+</script>
+
+
+
+
+
+
+
+<script type='text/javascript'>
+Typer.file='kernel.txt';
+Typer.init();
+</script>
+
+</head> 
+<body onload="startTime();autoCSS();">
+
+
+
+
+
+<h1 style="font-weight:bold;font-family:serif; padding:0% 3% 2% 3%;background:none; top:-15px;right:2%;position:fixed;font-size:30pt;" onclick='clearInterval(autoTypingInterval);autoTypingInterval = false;document.getElementById("menu").style.display = "block";'>&equiv;</h1>
+
+<!-- Left menu element-->
+
+
+
+
+<div id="advanced">
+<div id="menubar" onclick="document.getElementById('advanced').style.display = 'none';document.getElementById('menu').style.display = 'block';">
+<img src="img/back.png" />Advanced</div>
+
+<div style="padding:25px;font-size:18px;color:white;">
+Background Color<br>
+<div class="colorblock" style="background:black;" onclick='localStorage.setItem("textureZ", "img/0.jpg");$("body").css({"background-image":"url(" + localStorage.textureZ + ")" });localStorage.setItem("color1Z", "black");$("body").css({"background-color":localStorage.color1Z});$("body").css({ "background-image": "none" });hide();'></div>
+<div class="colorblock" style="background:#1e1e1e;" onclick='localStorage.setItem("textureZ", "img/0.jpg");$("body").css({"background-image":"url(" + localStorage.textureZ + ")" });localStorage.setItem("color1Z", "#1e1e1e");$("body").css({"background-color":localStorage.color1Z});$("body").css({ "background-image": "none" });hide();'></div>
+
+<div class="colorblock" style="background:#272f32;" onclick='localStorage.setItem("textureZ", "img/0.jpg");$("body").css({"background-image":"url(" + localStorage.textureZ + ")" });localStorage.setItem("color1Z", "#272f32");$("body").css({"background-color":localStorage.color1Z});$("body").css({ "background-image": "none" });hide();'></div>
+<div class="colorblock" style="background:#3c3c3c;" onclick='localStorage.setItem("textureZ", "img/0.jpg");$("body").css({"background-image":"url(" + localStorage.textureZ + ")" });localStorage.setItem("color1Z", "#3c3c3c");$("body").css({"background-color":localStorage.color1Z});$("body").css({ "background-image": "none" });hide();'></div>
+
+<div class="colorblock" style="background:#1c1f26;" onclick='localStorage.setItem("textureZ", "img/0.jpg");$("body").css({"background-image":"url(" + localStorage.textureZ + ")" });localStorage.setItem("color1Z", "#1c1f26");$("body").css({"background-color":localStorage.color1Z});$("body").css({ "background-image": "none" });hide();'></div>
+<div class="colorblock" style="background:#7f7d6e;" onclick='localStorage.setItem("textureZ", "img/0.jpg");$("body").css({"background-image":"url(" + localStorage.textureZ + ")" });localStorage.setItem("color1Z", "#7f7d6e");$("body").css({"background-color":localStorage.color1Z});$("body").css({ "background-image": "none" });hide();'></div>
+
+
+
+<br><br><br>
+Text Color<br>
+<div class="colorblock" style="background:white;" onclick='localStorage.setItem("color2Z", "#ffffff");$("body").css({"color":localStorage.color2Z});$(".folder").css({"background-color":localStorage.color2Z});hide();'></div>
+<div class="colorblock" style="background:red;" onclick='localStorage.setItem("color2Z", "red");$("body").css({"color":localStorage.color2Z});$(".folder").css({"background-color":localStorage.color2Z});hide();'></div>
+<div class="colorblock" style="background:orange;" onclick='localStorage.setItem("color2Z", "orange");$("body").css({"color":localStorage.color2Z});$(".folder").css({"background-color":localStorage.color2Z});hide();'></div>
+<div class="colorblock" style="background:#81f150;" onclick='localStorage.setItem("color2Z", "#81f150");$("body").css({"color":localStorage.color2Z});$(".folder").css({"background-color":localStorage.color2Z});hide();'></div>
+<div class="colorblock" style="background:#50e0f1;" onclick='localStorage.setItem("color2Z", "#50e0f1");$("body").css({"color":localStorage.color2Z});$(".folder").css({"background-color":localStorage.color2Z});hide();'></div>
+<div class="colorblock" style="background:#0fad8d;" onclick='localStorage.setItem("color2Z", "#0fad8d");$("body").css({"color":localStorage.color2Z});$(".folder").css({"background-color":localStorage.color2Z});hide();'></div>
+<br><br>
+<br>
+<div class="fontblock" onclick='document.getElementById("advanced").style.display = "none";document.getElementById("menu").style.display = "none";$("#console").css("font-family","Arial");localStorage.setItem("mainfont", "Arial");hide();' style="font-family:Arial;">Arial</div>
+<div class="fontblock" onclick='document.getElementById("advanced").style.display = "none";document.getElementById("menu").style.display = "none";$("#console").css("font-family","Fixedsys");localStorage.setItem("mainfont", "Fixedsys");hide();' style="font-family:Fixedsys;">Fixedsys</div>
+<div class="fontblock" onclick='document.getElementById("advanced").style.display = "none";document.getElementById("menu").style.display = "none";$("#console").css("font-family","Hacker1");localStorage.setItem("mainfont", "Hacker1");hide();' style="font-family:Hacker1;">Hacker1</div>
+<div class="fontblock" onclick='document.getElementById("advanced").style.display = "none";document.getElementById("menu").style.display = "none";$("#console").css("font-family","Hacker2");localStorage.setItem("mainfont", "Hacker2");hide();' style="font-family:Hacker2;">Hacker2</div>
+<div class="fontblock" onclick='document.getElementById("advanced").style.display = "none";document.getElementById("menu").style.display = "none";$("#console").css("font-family","Matrix");localStorage.setItem("mainfont", "Matrix");hide();' style="font-family:Matrix;">Matrix</div>
+
+<br><br>
+	<span id="logosdisplay"><button onclick='localStorage.setItem("folders", "none");$("#folders").css("display", localStorage.folders);hide();'>Hide Folders</button><button onclick='localStorage.setItem("folders", "block");$("#folders").css("display", localStorage.folders);hide();'>Show Folders</button></span>	
+			<span id="logosdisplay"><button onclick='localStorage.setItem("logos", "none");$("#center").css("display", localStorage.logos);hide();'>Hide Logos</button><button onclick='localStorage.setItem("logos", "block");$("#center").css("display", localStorage.logos);hide();'>Show Logos</button></span>	
+	
+		<button style="width:250px;" onclick="window.location.reload()">Reset Input</button><br>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="menu">
+<div id="menubar" onclick="hide();">
+<img src="img/back.png" />Settings</div>
+	
+	
+<div id="images"><br>
+   <a onclick="localStorage.setItem('color1Z', 'black');$('body').css({'background-color':localStorage.color1Z });localStorage.setItem('textureZ', 'img/0.jpg');$('body').css({'background-image':'url(' + localStorage.textureZ + ')' });localStorage.setItem('color2Z', '#81f150');$('body').css({'color':localStorage.color2Z});$('.folder').css({'background-color':localStorage.color2Z});localStorage.setItem('logotype', 'img/scp.png');$('#center').css({ 'background-image': 'url(' + localStorage.logotype + ')' });hide();">
+        <img src="img/1.jpg">
+     
+    </a>
+	
+
+	
+	<a onclick="	localStorage.setItem('color1Z', 'white');$('body').css({'background-color':'white' });localStorage.setItem('textureZ', 'img/0.jpg');$('body').css({'background-image':'url(' + localStorage.textureZ + ')' });localStorage.setItem('color2Z', 'darkgrey');$('body').css({'color':localStorage.color2Z});$('.folder').css({'background-color':localStorage.color2Z});localStorage.setItem('logotype', 'img/dharma.png');$('#center').css({ 'background-image': 'url(' + localStorage.logotype + ')' });hide();">
+       <img src="img/dharma.jpg">
+   
+    </a>
+	
+		<a onclick="localStorage.setItem('textureZ', 'img/umbrella.jpg');$('body').css({'background-image':'url(' + localStorage.textureZ + ')' });localStorage.setItem('color2Z', 'red');$('body').css({'color':localStorage.color2Z});$('.folder').css({'background-color':localStorage.color2Z});localStorage.setItem('logotype', 'img/umbrella.png');$('#center').css({ 'background-image': 'url(' + localStorage.logotype + ')' });hide();">
+       <img src="img/2.jpg">
+       
+    </a>
+	
+	   <a onclick="localStorage.setItem('color1Z', '#5f2d00');$('body').css({'background-color':localStorage.color1Z });localStorage.setItem('textureZ', 'img/3.png');$('body').css({'background-image':'url(' + localStorage.textureZ + ')' });localStorage.setItem('color2Z', 'orange');$('body').css({'color':localStorage.color2Z});$('.folder').css({'background-color':localStorage.color2Z});localStorage.setItem('logotype', 'img/aperture.png');$('#center').css({ 'background-image': 'url(' + localStorage.logotype + ')' });hide();">
+        <img src="img/3.jpg">
+
+    </a>
+	
+
+	
+			    <a onclick="	localStorage.setItem('color1Z', 'rgb(50, 140, 178)');$('body').css({'background-color':localStorage.color1Z });localStorage.setItem('textureZ', 'img/2.png');$('body').css({'background-image':'url(' + localStorage.textureZ + ')' });localStorage.setItem('color2Z', 'white');$('body').css({'color':localStorage.color2Z});$('.folder').css({'background-color':localStorage.color2Z});localStorage.setItem('logotype', 'img/blackmesa.png');$('#center').css({ 'background-image': 'url(' + localStorage.logotype + ')' });hide();">
+       <img src="img/blackmesa.jpg">
+ 
+    </a>
+	
+	
+				    <a onclick="localStorage.setItem('color1Z', 'black');$('body').css({'background-color':localStorage.color1Z });localStorage.setItem('textureZ', 'img/0.jpg');$('body').css({'background-image':'url(' + localStorage.textureZ + ')' });localStorage.setItem('color2Z', 'white');$('body').css({'color':localStorage.color2Z});$('.folder').css({'background-color':localStorage.color2Z});localStorage.setItem('logotype', 'img/0.png');$('#center').css({ 'background-image': 'url(' + localStorage.logotype + ')' });hide();">
+       <img src="img/4.jpg">
+
+    </a>
+	
+
+	
+		<br><br>
+		<span style="">
+		<p style="font-size:8px;margin:0;padding:0;line-height:8px;">DISCLAIMER: Logos used from Sony Pictures, <br>SCP, VALVe, Tegnio are for entertainment purposes only.</p>
+</span>
+		<br>
+		<span>
+		<button style="width:250px;margin-right:6px;" onclick="document.getElementById('advanced').style.display = 'block';document.getElementById('menu').style.display = 'none';">Advanced Settings</button>
+	</span><span>
+		<button style="width:250px;" onclick="document.getElementById('about').style.display = 'block';" style="padding:10px;">About this app</button>
+		</span><br>
+
+
+
+		
+		<br>
+
+	
+<script>
+function myFunction() {
+
+    localStorage.setItem('logotypes', "none");
+		$("#logotypes").css("display", "none");
+}
+
+function hide() {
+
+document.getElementById('advanced').style.display = 'none';
+document.getElementById('menu').style.display = 'none';
+}
+
+
+
+function myFunction2() {
+
+	    localStorage.setItem('logotypes', "block");
+		$("#logotypes").css("display", "block");
+}
+</script>
+<br>
+
+
+
+
+<br>
+	
+	</div>
+
+
+	
+</div>
+
+
+
+
+
+<div id="about" onclick="document.getElementById('about').style.display = 'none';" style="color:#fff; display:none;z-index:1000;position:fixed;width:100%;height:100%;background:rgb(10,10,10);margin:0 auto;text-align:center;">
+<div id="menubar">
+<img src="img/back.png" />About this </div>
+	
+<br><br><br>
+<img style="width:30%;" src="img/terminal.png"><br>
+<h1>GeekTyper Build 1.0</h1>
+<h2>Made by fediaFedia and Lexuzieel</h2>
+<br>
+
+
+
+<div id="share-buttons">
+ 
+<!-- Facebook -->
+<a href="http://www.facebook.com/sharer.php?u=http://geektyper.com/" target="_blank"><img src="img/facebook.png" alt="Facebook" /></a>
+ 
+<!-- Twitter -->
+<a href="http://twitter.com/share?url=http://geektyper.com/&text=Awesome Hacking Prank site!&hashtags=geektyper" target="_blank"><img src="img/twitter.png" alt="Twitter" /></a>
+ 
+<!-- Google+ -->
+<a href="https://plus.google.com/share?url=http://geektyper.com/" target="_blank"><img src="img/google.png" alt="Google" /></a>
+ 
+<!-- Reddit -->
+<a href="http://reddit.com/submit?url=http://geektyper.com/&title=Awesome Hacking Prank site!" target="_blank"><img src="img/reddit.png" alt="Reddit" /></a>
+ 
+<!-- Pinterest -->
+<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="img/pinterest.png" alt="Pinterest" /></a>
+ <br>
+  <br>
+   <br>
+</div>
+Feedback, Suggestions, DMCA Requests to:<br> <b><a style="color:white;font-size:14px;" href="mailto:geektyper@outlook.com">geektyper@outlook.com</a><b><br><br><br>
+<button style="padding:10px;">Okie Dokie Loki</button>
+
+
+
+</div>
+
+
+
+
+
+
+<select style="display:none;" name="style" id="style" onChange="changeCSS();">
+    <option id="green" value="green">Standard</option>
+    <option id="red" value="red">Alternative</option>
+	<option id="orange" value="orange">Alternative</option>
+	<option id="white" value="white">Alternative</option>
+</select>
+
+
+
+<div id='Breach2' class="dragme"  onclick="document.getElementById('Breach').style.display = 'none';" ondragstart='return false;' style="display:none;"><h2>DECRYPTING PASSWORDS</h2><img  style="width:100%;" src='img/console.gif'></div>
+
+<div id='AccessGranted'  onclick="$('body').css({ 'background-image': 'url(' + localStorage.textureZ + ')' });document.getElementById('AccessGranted').style.display = 'none';"  style="display:none;"><h1>ACCESS GRANTED</h1></div>
+<div id='AccessDenied'   onclick="$('body').css({ 'background-image': 'url(' + localStorage.textureZ + ')' });document.getElementById('AccessDenied').style.display = 'none';"  ondragstart='return false;' style="display:none;"><h1>ACCESS DENIED</h1></div>
+<div id='LevelRequired'  onclick="document.getElementById('LevelRequired').style.display = 'none';"   ondragstart='return false;' style="display:none;"><h1>SECURITY BREACH</h1><h2>LEVEL 3 ACCESS REQUIRED</h2></div>
+<div id='Downloading'  onclick="document.getElementById('Downloading').style.display = 'none';"  ondragstart='return false;' class="dragme" ondragstart='return false;' style="display:none;"><h1>Downloading...</h1>Critical Data<br><img style="width:100%;" src='img/downloading.gif'></div>
+<div id='Rat'  onclick="document.getElementById('Rat').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><img style="width:100%;" src='img/rat.gif'></div>
+<div id='Initializing'  onclick="document.getElementById('Initializing').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>Encrypting</h1><img style="width:100%;" src='img/encrypting.gif'></div>
+<div id='Scan'  onclick="document.getElementById('Scan').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>Satellite Uplink</h1>Interfacing via Stuttgard<br><img style="width:100%;" src='img/satellite.gif'></div>
+<div id='Map'  onclick="document.getElementById('Map').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>Tracing Contact<br></h1><img style="width:100%;" src='img/facilities.gif'></div>
+<div id='Countdown' class="dragme" ondragstart='return false;' style="display:none;"><h1>Purge Facility</h1>Purging will commence in:<br><br><br><img style="width:100%;" src='img/countdown.gif'><br><br></div>
+<div id='Password'  onclick="document.getElementById('Password').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>Purge Facility?</h1>Confirm password<br><img style="width:100%;" src='img/password.gif'></div>
+<div id='Poke'  onclick="document.getElementById('Poke').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>PROJECT SIOP-62</h1>Nuclear Weapons Program<br><img style="width:100%;" src='img/datcoldwar.gif'></div>
+<div id='Hash'  onclick="document.getElementById('Hash').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>Password Decryptor</h1>Calculating Hashes<br><br><img style="width:100%;" src='img/hash.gif'></div>
+<div id='Pony'  class="dragme" ondragstart='return false;' style="display:none;"><img src='img/rainbow.gif'></div>
+<div id='SystemFailure'  class="dragme" ondragstart='return false;' style="display:none;"></div>
+<div id='ConnectionLost'  class="dragme" ondragstart='return false;' style="display:none;">Connection Lost<h2>Facility Offline</h2></div>
+
+<div id='Breach'  onclick="document.getElementById('Breach').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>SECURITY ALERT</h1>INTERIOR EXOGEN BREACH<br><br><img style="width:100%;" src='img/breach.gif'></div>
+<div id='Evacuate'  onclick="document.getElementById('Evacuate').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><img  style="background:none;" id="close" src="img/close1.png"/><h1>FACILITY BREACHED</h1>CRITICAL EXOGEN BREACH<br><br><img style="width:100%;" src='img/evacuate.gif'></div>
+<div id='Query'  onclick="document.getElementById('Query').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;">Interpol database<img  style="width:100%;" src='img/query.gif'></div>
+<div id='Console' onclick="document.getElementById('Console').style.display = 'none';" class="dragme" ondragstart='return false;' style="display:none;">Compiling Nodes<br><br><img style="width:100%;" src='img/console.gif'></div>
+<div id='Deploy'  onclick="document.getElementById('Deploy').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>Activating HAWK</h1>Engage all enemy vehicles<img  style="width:100%;" src='img/Ship.gif'></div>
+<div id='Numbers'  class="dragme" ondragstart='return false;' style="display:none;"><img src='img/numbers.gif'></div>
+<div id='Radar'  ondragstart='return false;' onclick='$("#Radar").toggle();' style="display:none;"><img src='img/radar.gif'></div>
+<div id='Irc'  onclick="document.getElementById('Irc').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><img  style="width:100%;" src='img/irc.gif'></div>
+<div id='Stability'  onclick="document.getElementById('Stability').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><img  style="width:100%;" src='img/stability.gif'></div>
+
+
+<div id='Tracing'  onclick="document.getElementById('Tracing').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><img  style="width:100%;" src='img/tracing.gif'></div>
+<div id='BigFolder'  onclick="document.getElementById('BigFolder').style.display = 'none';" class="dragme" ondragstart='return false;' style="display:none;">
+
+
+<h2> /root/bash/scripts</h2>
+
+<div class="folder" onclick="document.getElementById('Downloading').style.display = 'block';"><p>Data</p></div>
+<div class="folder" onclick="document.getElementById('Hash').style.display = 'block';"><p>Hash</p></div>
+<div class="folder"  onclick="document.getElementById('Console').style.display = 'block';"><p>Terminal</p></div>
+<div class="folder"  onclick="document.getElementById('Initializing').style.display = 'block';"><p>Decryptor</p></div>
+<div class="folder"  onclick="document.getElementById('Map').style.display = 'block';"><p>Map</p></div>
+<div class="folder" onclick="document.getElementById('Scan').style.display = 'block';"><p>Scan 6</p></div>
+<div class="folder" onclick="document.getElementById('Query').style.display = 'block';"><p>Query Db</p></div>
+<div class="folder"  onclick="document.getElementById('Deploy').style.display = 'block';"><p>Deploy</p></div>
+<div class="folder"  onclick="document.getElementById('Irc').style.display = 'block';"><p>Chat</p></div>
+<div class="folder"  onclick="document.getElementById('Tracing').style.display = 'block';"><p>Trace</p></div>
+<div class="folder" onclick="document.getElementById('Neurotoxin').style.display = 'block';"><p>Neuro</p></div>
+<div class="folder" onclick="document.getElementById('Rat').style.display = 'block';"><p>Infect</p></div>
+<div class="folder"  onclick="document.getElementById('AccessDenied');document.getElementById('accessdenied').play();"><p>Root</p></div>
+<div class="folder"  onclick="document.getElementById('Poke').style.display = 'block';"><p>SIOP</p></div>
+
+</div>
+
+
+<div id='Neurotoxin' onclick="document.getElementById('Neurotoxin').style.display = 'none';"  class="dragme" ondragstart='return false;' style="display:none;"><h1>Flooding Facility</h1>Preparing Neurotoxin Emiters<br><br><img  style="width:100%;" src='img/neurotoxin.gif'></div>
+
+<audio loop id="myaudio">
+<source src="/sound/caution.mp3" type="audio/wav" />
+</audio>
+
+
+
+<audio loop id="myaudio2">
+<source src="/sound/purge.mp3" type="audio/wav" />
+</audio>
+
+
+<audio id="accessdenied">
+<source src="/sound/accessdenied.mp3" type="audio/mp3" />
+</audio>
+
+
+
+<div id="center">
+</div>
+
+
+<div id='console'><div id="txt"></div>SCP Secure Systems 4.2654.2 <br/></br>SLEVEL 6 Security Clearance Required</br>DATA LOCKED</br></div>
+
+<div id="folders">
+<div class="folder" onclick="document.getElementById('Downloading').style.display = 'block';"><p>Data</p></div>
+<div class="folder"  onclick="document.getElementById('Console').style.display = 'block';"><p>Terminal</p></div>
+<div class="folder"  onclick="document.getElementById('Hash').style.display = 'block';"><p>Decryptor</p></div>
+<div class="folder" onclick="document.getElementById('Numbers').style.display = 'block';"><p>Num</p></div>
+<div class="folder"  onclick='$("#BigFolder").toggle();'><p>Scripts</p></div>
+
+<div id="result2"></div>
+</div>
+
+
+
+<div class="avert2" onclick="document.getElementById('iphone-keyboard').style.display = 'block';document.getElementById('console').style['padding-bottom'] = '60%';">+</div>
+
+
+<script>
+var autoTypingInterval;
+function ToggleAutoTyping() {
+if(!autoTypingInterval) {
+autoTypingInterval = setInterval(function(){
+Typer.addText(12);
+}, 60);document.getElementById("mod").innerHTML = "STOP";
+} else {clearInterval(autoTypingInterval);autoTypingInterval = false;document.getElementById("mod").innerHTML = "TYPE";}
+}
+</script>
+
+
+
+<ul id="iphone-keyboard" onclick="Typer.addText(72);">
+
+		<li style="clear:both;">
+		
+		<button type="button" onclick="ToggleAutoTyping();" id="mod" class="specialkey return">AUTO</button>
+
+<button type="button" onclick="document.getElementById('AccessDenied').style.display = 'block';$('body').css('background-image', 'url(img/denied2.gif)');" class="specialkey numbers">BR</button>
+<button type="button" onclick="document.getElementById('Tracing').style.display = 'block';"  class="specialkey numbers">TR</button>
+<button type="button" onclick="document.getElementById('Evacuate').style.display = 'block';" class="specialkey numbers">EV</button>
+<button type="button" onclick="document.getElementById('AccessGranted').style.display = 'block';$('body').css('background-image', 'url(img/granted2.gif)');" class="specialkey numbers">OT</button>
+<button type="button" onclick="document.getElementById('Stability').style.display = 'block';" class="specialkey numbers">PT</button>
+
+
+	
+		</li>
+<br><br><br><hr style="clear:both;margin-top:5px;margin-bottom:5px;">
+		<li>
+			<button type="button">Q</button>
+			<button type="button">W</button>
+			<button type="button">E</button>
+			<button type="button">R</button>
+			<button type="button">T</button>
+			<button type="button">Y</button>
+			<button type="button">U</button>
+			<button type="button">I</button>
+			<button type="button">O</button>
+			<button type="button">P</button>
+		</li>
+		<li>
+			<button type="button">A</button>
+			<button type="button">S</button>
+			<button type="button">D</button>
+			<button type="button">F</button>
+			<button type="button">G</button>
+			<button type="button">H</button>
+			<button type="button">J</button>
+			<button type="button">K</button>
+			<button type="button">L</button>
+		</li>
+		<li>
+			<button type="button" class="specialkey shift">()</button>
+			<button type="button">Z</button>
+			<button type="button">X</button>
+			<button type="button">C</button>
+			<button type="button">V</button>
+			<button type="button">B</button>
+			<button type="button">N</button>
+			<button type="button">M</button>
+			<button type="button" class="specialkey backspace">{}</button>
+		</li>
+		<li>
+			<button type="button" class="specialkey numbers">123</button>
+			<button type="button" class="specialkey numbers">;</button>
+			<button type="button" class="space">space</button>
+			<button type="button" onclick="document.getElementById('iphone-keyboard').style.display = 'none';document.getElementById('console').style['padding-bottom'] = '0%';" class="specialkey return">min</button>
+		</li>
+	</ul>
+
+</div>
+
+	<script>
+
+	
+	
+ document.addEventListener("backbutton", onBackKeyDown, false);
+
+function onBackKeyDown() {
+document.getElementById('advanced').style.display = 'none';
+document.getElementById('menu').style.display = 'none';
+}
+ 
+ 
+</script>	
+
+
+
+
+
+<script type='text/javascript'>
+
+
+
+
+if (typeof(Storage) != "undefined") {
+
+getFont = localStorage.getItem("mainfont") || 'Arial';
+	 	 	$("#console").css({"font-family":getFont});
+			
+			
+	 $("body").css({"background-color":localStorage.color1Z});
+	 $("body").css({"color":localStorage.color2Z});
+	 $(".folder").css({"background-color":localStorage.color2Z});
+	 $('#center').css({ 'background-image': "url(" + localStorage.logotype + ")" });
+	 $('body').css({ 'background-image': "url(" + localStorage.textureZ + ")" });
+	 $("#folders").css("display", localStorage.folders);
+	 
+
+
+
+getFolders = localStorage.getItem("folders") || 'block';
+$("#folders").css("display", getFolders);
+
+
+getFolders = localStorage.getItem("logos") || 'none';
+$("#center").css("display", localStorage.logos);
+
+	 
+	
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
+<!--*(c) Copyright 2011 Simone Masiero. Some Rights Reserved. *This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 License-->

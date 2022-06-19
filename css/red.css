@@ -1,0 +1,44 @@
+body {
+
+background-image:url(../img/umbrella.jpg);
+background-color:rgb(0, 0, 0);
+color:rgb(255, 0, 0); 
+}
+
+#sectionkeyboard {padding-top:4%;padding-bottom:4%;text-align:center;position:fixed;width:100%;bottom:0px;left:0px;}
+#sectionkeyboard button:hover {background:rgb(255,0,0);}
+#sectionkeyboard button:active {background:rgb(255,0,0);}
+
+#logotypes {
+ margin: auto;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+width:40%;
+content:url("../img/umbrella.png");
+z-index:-1;
+}
+
+
+#Breach {
+color:#83f352;
+border:3px solid #83f352;
+border-top:20px solid #83f352;
+}
+
+#Tracing {
+color:#83f352;
+border:3px solid #83f352;
+border-top:20px solid #83f352;
+}
+
+#AccessGranted{
+border:2px solid #83f352;
+color:#83f352;
+}
+
+#Evacuate {
+
+border:3px solid #F00;
+color:#F00;
+border-top:20px solid #F00;
+}
